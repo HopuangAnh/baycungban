@@ -1,0 +1,115 @@
+.footer {
+  margin-top: 80px;
+  .connect {
+    position: relative;
+    z-index: -1;
+    .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 40px;
+      padding-bottom: 25px;
+      position: relative;
+    }
+    &-list {
+      display: flex;
+      align-items: center;
+      .item {
+        display: flex;
+        align-items: center;
+        margin-right: 30px;
+        &-img {
+          width: 18px;
+          height: 18px;
+          margin-right: 5px;
+        }
+        &-text {
+          font-size: 1.4rem;
+          font-weight: 400;
+          color: #000;
+          line-height: 20px;
+        }
+        &:last-child {
+          margin-left: 0;
+        }
+      }
+    }
+    &-title {
+      .text {
+        display: flex;
+        align-items: center;
+      }
+      p {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 20px;
+        color: #000;
+        margin: 0 5px;
+      }
+      .gline {
+        width: 40px;
+        height: 1px;
+        background-color: #000;
+        margin: 0 5px;
+      }
+      img {
+        width: 18px;
+        height: 18px;
+        margin: 0 5px;
+      }
+    }
+    &-bg {
+      width: 100%;
+      height: calc(100% + 50px);
+      background-color: #F4F2F9;
+      margin-left: auto;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: -1;
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .footer {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .footer {
+    margin: 0;
+    .connect {  
+      &-list {
+        flex-direction: column;
+        align-items: flex-start;
+        .item {
+          margin: 0;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 465px) {
+  .footer {
+    .connect { 
+      .wrap {
+        flex-wrap: wrap;
+      }
+      &-list {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      &-title {
+        .text {
+          flex-direction: row-reverse;
+        }
+        img {
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
